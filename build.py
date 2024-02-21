@@ -32,7 +32,7 @@ for poll in polls:
         
         # Voeg alle keuzes aan de vraag toe
         for y in range(len(questions[x]["choices"])):
-            choice = f"({chr(y + 97)})"
+            choice = f"({chr(y + ord('a'))})"
             if questions[x]["choices"][y]["isCorrectAnswer"]:
                 choice = f"{{\\red {choice}}}"
             question += f"\\item[{choice}]" + "{" + questions[x]["choices"][y]["text"] + "}\n"
